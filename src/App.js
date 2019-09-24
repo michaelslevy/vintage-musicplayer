@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import TrackHolder from "./components/TrackList/TrackHolder";
+import PlayControls from "./components/PlayControls"
+import PlaybackDisplay from "./components/playbackDisplay"
+import VuMeter from "./components/VuMeter"
+import VolumeSliders from "./components/VolumeSliders"
+import Genres from "./components/Genres"
+//import Logo from "./logo.png"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+  render() {
+    return (
+      <div className="App" id='metrosonicPlayer'>
+          <header>
+            <h1 id='logo'><span>Metrosonic</span></h1>
+
+          {/* <SourceKnob />*/ }
+          </header>
+          <div id='wrapper'>
+            <div id='left'>
+              <div id='topRow'>
+                <VuMeter />
+              </div>
+             <VolumeSliders />
+             <Genres />
+            </div>
+            <div id='right'>
+              <PlaybackDisplay />
+              <TrackHolder />
+              <PlayControls />
+            </div>
+          </div>
+      </div>
+    );
+  }
 }
 
 export default App;

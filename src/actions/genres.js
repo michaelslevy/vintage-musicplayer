@@ -1,6 +1,6 @@
 import axios from 'axios';
-const trackJSON="https://www.metrosonic.net/metrosonic_track/?JSON=1&GENRE=1";
-
+//const trackJSON="https://www.metrosonic.net/metrosonic_track/?JSON=1&GENRE=1";
+const trackJSON="http://wordpressdemo.webventions.com/track/?JSON=1&GENRE=1";
 
 const requestGenre = users => ({
   type: 'genre_REQUESTED'

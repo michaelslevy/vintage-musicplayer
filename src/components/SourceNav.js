@@ -61,7 +61,7 @@ class SourceNav extends React.Component {
       <label>Metrosonic<br/> Library</label>
         <div id='sourceButtonGroup'>
           <div className={(this.state.source==="local")? "led top active": "led top"}></div>
-          <button onClick={this.sortHandler}><img alt='source selector' height='80' src={(this.state.source==="soundcloud")? toggleDown: toggleUp}  draggable="false" /></button>
+          <button onClick={this.sortHandler}><img alt='source selector' height='80' width='30' src={(this.state.source==="soundcloud")? toggleDown: toggleUp}  draggable="false" /></button>
           <div className={(this.state.source==="soundcloud")? "led bottom active": "led bottom"}></div>
         </div>
       <label>SoundCloud</label>

@@ -2,7 +2,6 @@ import {parsePlaylist} from "../data/data.js";
 import axios from 'axios';
 const trackJSON="https://www.metrosonic.net/metrosonic_track/?JSON=1";
 
-
 const requestTracks = users => ({
   type: 'tracks_REQUESTED'
 });

@@ -1,3 +1,5 @@
+import { AudioContext } from 'standardized-audio-context';
+
 class _AudioPlayback {
 
   constructor() {
@@ -20,7 +22,7 @@ class _AudioPlayback {
   }
 
   startAudioContext=function(){
-    this.context = new (window.AudioContext || window.webkitAudioContext)();
+    this.context = new AudioContext();
 
 
     if (!this.context) {

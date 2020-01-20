@@ -23,7 +23,7 @@
   -moz-osx-font-smoothing: grayscale;
   background: #333;
   color:#fff;
-  font-size:1rem;
+  font-size:100%;
 
   max-width: 900px;
   margin:50px auto;
@@ -31,6 +31,7 @@
   border:solid 1px #444;
   padding:20px;
   background:#5a5b5f;
+  line-height:100%;
 }
 
 #metrosonicPlayer:after {
@@ -214,7 +215,7 @@ html #metrosonicPlayer .scrollarea .scrollbar-container.vertical .scrollbar {
 
 #metrosonicPlayer #playerControls button{
   position:relative;
-  font-size:1.2rem;
+  font-size:1.9rem;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d8d5ce+3,c0bdb7+100 */
   background: #d8d5ce; /* Old browsers */
   background: -moz-radial-gradient(center, ellipse cover, #d8d5ce 3%, #c0bdb7 100%); /* FF3.6-15 */
@@ -298,20 +299,22 @@ html #metrosonicPlayer .scrollarea .scrollbar-container.vertical .scrollbar {
     font-weight: normal;
     text-align: left;
     margin:0;
-    font-size: 2.5rem;
+    font-size: 250%;
+    line-height:100%;
 }
 
 #metrosonicPlayer #playbackDisplay #playBackAuthor {
   font-weight:normal;
   margin:0;
   float:left;
-  font-size: 1.5rem;
+  font-size: 150%;
 }
 
 #metrosonicPlayer #playbackDisplay #duration {
   float:right;
   padding:0;
   margin:0;
+  font-size: 150%;
 }
 
 /* Meter */
@@ -357,7 +360,7 @@ html #metrosonicPlayer .scrollarea .scrollbar-container.vertical .scrollbar {
 }
 
 #metrosonicPlayer label{
-  font-size:.8rem;
+  font-size:85%;
 }
 
 #metrosonicPlayer .description {
@@ -494,6 +497,7 @@ html #metrosonicPlayer .scrollarea .scrollbar-container.vertical .scrollbar {
 #metrosonicPlayer .sliderBg {
   background:#c6c6c6;
   padding:20px 0;
+  margin-bottom:10px;
 }
 
 #metrosonicPlayer .rangeslider-vertical {
@@ -607,6 +611,7 @@ html #metrosonicPlayer .scrollarea .scrollbar-container.vertical .scrollbar {
   color:white;
   font-size:16px;
   border:0;
+  padding:0;
 }
 
 #metrosonicPlayer #sourceSelector button.active {
@@ -831,7 +836,7 @@ html #metrosonicPlayer .scrollarea .scrollbar-container.vertical .scrollbar {
   margin-bottom:8px;
   color:white;
   border-radius:0;
-  font: 400 1rem/100% 'futura-pt', arial, sans-serif;
+  font: 400 85%/100% 'futura-pt', arial, sans-serif;
   padding:0;
 }
 
@@ -865,14 +870,23 @@ html #metrosonicPlayer .scrollarea .scrollbar-container.vertical .scrollbar {
   }
 }
 
-@media (max-width: 760px){
+@media (max-width: 880px){
   #metrosonicPlayer {
     margin:0;
   }
 
-  #metrosonicPlayer #genreKnob, #metrosonicPlayer #volumeSiders, #metrosonicPlayer .slider {
-    display:none;
+  #metrosonicPlayer #rightColumn .topRow {
+    justify-content: center;
   }
+
+  #metrosonicPlayer #trackScroller {
+      display: flex;
+      justify-content: center;
+  }
+
+   #metrosonicPlayer #volumeSiders {
+     display: none;
+   }
 
   #metrosonicPlayer #rightColumn {
     width:100%;
@@ -882,6 +896,29 @@ html #metrosonicPlayer .scrollarea .scrollbar-container.vertical .scrollbar {
     display:block;
     width:100%;
   }
+
+  #metrosonicPlayer #mobileGenreKnob {
+    display: flex;
+    margin-top:20px;
+    justify-content:center;
+    border:solid 1px white;
+    padding:10px;
+    margin-bottom:10px;
+  }
+
+  #metrosonicPlayer #mobileGenreKnob #sourceButtonGroup {
+      position: relative;
+      width: 65px;
+      left:15px;
+  }
+
+  #metrosonicPlayer  #mobileGenreKnob label {
+    text-align: center;
+  }
+
+  #metrosonicPlayer  #mobileGenreKnob #sourceSelector {
+    align-items: center;
+}
 
   #metrosonicPlayer .genres .scrollarea {
     width:100%;
@@ -912,8 +949,18 @@ html #metrosonicPlayer .scrollarea .scrollbar-container.vertical .scrollbar {
     margin-top:20px;
   }
 
-  #metrosonicPlayer #volumeSiders, #metrosonicPlayer .slider, #trackScroller, #metrosonicPlayer .genres {
+/*  #metrosonicPlayer #volumeSiders, #metrosonicPlayer .slider, #trackScroller, #metrosonicPlayer .genres {
     display:none;
+  }*/
+
+  #metrosonicPlayer #rightColumn .topRow {
+    display:none;
+  }
+
+  #metrosonicPlayer #trackScroller {
+      display: flex;
+      align-items: center;
+      justify-content: center;
   }
 
   #metrosonicPlayer .genres {
